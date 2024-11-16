@@ -1,0 +1,179 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #ddd;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #009688;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #04665c;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(./layered-peaks-haikei.svg) bottom center no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+
+.title {
+  position: relative;
+  margin-top: 35px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 20px;
+  text-align: center;
+  border-bottom: 2px solid #009688;
+  padding-bottom: 10px;
+  color: white;
+  width: 70%;
+}
+
+@media (min-width: 490px) {
+  .title {
+    width: fit-content;
+  }
+}
+
+.fetch-repos {
+  width: 70%;
+  position: relative;
+  margin-top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 2px solid #009688;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  overflow: hidden;
+  margin-bottom: 50px;
+}
+
+.fetch-repos .fetchCont {
+  padding: 20px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  background: #eee;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 767px) {
+  .fetch-repos .fetchCont {
+    flex-direction: row;
+  }
+}
+
+.fetch-repos .fetchCont input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  height: 44px;
+  font-size: 17px;
+}
+
+.fetch-repos .fetchCont input:focus {
+  outline: 2px solid #ff5722;
+}
+
+.fetch-repos .fetchCont button {
+  margin-left: 0;
+  width: 140px;
+  height: 44px;
+  border: none;
+  background-color: #ff5722;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.fetch-repos .fetchText {
+  background-color: #ddd;
+  padding: 20px;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.fetch-repos .fetchText div {
+  background-color: white;
+  margin: 0;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  color: red;
+}
+
+.fetch-repos .fetchText div:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.fetch-repos .fetchText div div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 !important;
+  flex-direction: initial;
+}
+
+.fetch-repos .fetchText div a,
+.fetch-repos .fetchText div span {
+  width: 90px;
+  display: inline-block;
+  text-align: center;
+  margin-left: 10px;
+  border-radius: 4px;
+  padding: 4px;
+  color: white;
+}
+
+.fetch-repos .fetchText div a {
+  text-decoration: none;
+  background-color: #ff5722;
+}
+
+.fetch-repos .fetchText div span {
+  background-color: #009688;
+  width: 180px;
+}
+
+.fetch-repos .fetchText div span:first-child {
+  width: 130px !important;
+}
+
+.fetch-repos .fetchText div div:first-child {
+  flex: 1;
+  margin: 0;
+  color: black !important;
+}
+
+.wrongUser {
+  justify-content: center !important;
+}
